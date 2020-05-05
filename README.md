@@ -18,19 +18,19 @@ Using a certificate is a good way to prevent “man-in-the-middle” attacks. (s
 
 $ openssl req -new -config root-ca.conf -out root-ca.csr -keyout private/root-ca.k
 
-PEM pass phrase: roma caput mundi
+PEM pass phrase: my smart pass-phrase
 
 2) Create self-signed certificate
  
 $ openssl ca -selfsign -config root-ca.conf -in root-ca.csr -out root-ca.crt -extensions ca_ext
 
-Enter pass phrase: roma caput mundi
+Enter pass phrase: my smart pass-phrase
 
 3) Generate a Certificate Revocation List (CRL)
 
 $ openssl ca -gencrl -config root-ca.conf -out root-ca.crl
 
-Enter pass phrase for ./private/root-ca.key: roma caput mundi
+Enter pass phrase for ./private/root-ca.key: my smart pass-phrase
 
 ## Root CA Operations
 
@@ -48,7 +48,7 @@ $ openssl ca -config root-ca.conf -revoke certs/1002.pem -crl_reason keyCompromi
 
 $ openssl req -new -newkey rsa:2048 -subj "/C=GB/O=Example/CN=OCSP Root Responder" -keyout private/root-ocsp.key -out root-ocsp.csr
 
-Enter PEM pass phrase: roma caput mundi
+Enter PEM pass phrase: my smart pass-phrase
 
 2) Issue a certificate
 
