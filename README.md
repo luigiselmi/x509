@@ -1,6 +1,6 @@
 Public Key Infrastructure
 =========================
-This repository contains the information, the openssl commands, and the files used to build a public key infrastructure for secure and reliable communication. The code is based on the book by [Ristic, Bulletproof SSL and TLS](https://www.amazon.com/Bulletproof-SSL-TLS-Understanding-Applications/dp/1907117040).
+This repository provides a short guide to build a public key infrastructure for secure and reliable communication using openssl. The code is based on the book by [Ristic, Bulletproof SSL and TLS](https://www.amazon.com/Bulletproof-SSL-TLS-Understanding-Applications/dp/1907117040).
 
 Blog post on X.509 certificate (from CA or self-signed)
 About 
