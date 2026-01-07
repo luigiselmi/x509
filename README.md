@@ -20,9 +20,9 @@ $ openssl req -new -config root-ca.conf -out root-ca.csr -keyout private/root-ca
 PEM pass phrase: my smart pass-phrase
 
 2) Create self-signed certificate
- 
+```
 $ openssl ca -selfsign -config root-ca.conf -in root-ca.csr -out root-ca.crt -extensions ca_ext
-
+```
 Enter pass phrase: my smart pass-phrase
 
 3) Generate a Certificate Revocation List (CRL)
